@@ -28,9 +28,9 @@
 	"scripts": {
 		"build": "tsup",
 		"prepack": "yarn build",
-		"lint": "prettier --check . && cross-env TIMING=1 eslint src --ext .mjs,.js,.ts --format=pretty",
-		"format": "prettier --write . && cross-env TIMING=1 eslint src --ext .mjs,.js,.ts --fix --format=pretty",
-		"watch": "nodemon --watch src --exec \"yarn build\""
+		"lint": "prettier --check . && cross-env TIMING=1 eslint . --ext .mjs,.js,.ts --format=pretty",
+		"format": "prettier --write . && cross-env TIMING=1 eslint . --ext .mjs,.js,.ts --fix --format=pretty",
+		"watch": "nodemon --watch . --exec \"yarn build\""
 	},
 	"packageManager": "yarn@3.5.0",
 	"devDependencies": {
