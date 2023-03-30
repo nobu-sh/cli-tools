@@ -1,28 +1,45 @@
 {
-  "name": "typescript-starter",
-  "version": "0.0.0",
-  "main": "dist/index.js",
-  "scripts": {
-    "build": "tsc",
-    "start": "node dist",
-    "dev": "nodemon --config nodemon.json src/index.ts"
+  "name": "@nobush/cli-tools",
+  "version": "0.0.1",
+  "description": "A package for playing music with Discord.js",
+  "author": {
+    "name": "Nobush",
+    "email": "chat@nobu.sh",
+    "url": "https://nobu.sh/"
   },
-  "license": "MIT",
+  "main": "lib/index.js",
+  "files": [
+    "lib",
+    "README.md"
+  ],
+  "bin": {
+    "nobu": "lib/index.js"
+  },
+  "homepage": "https://github.com/nobu-sh/cli-tools#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nobu-sh/cli-tools"
+  },
+  "bugs": {
+    "url": "https://github.com/nobu-sh/cli-tools/issues"
+  },
+  "scripts": {
+    "build": "tsup",
+    "prepack": "npm run build",
+    "watch": "nodemon --watch src --exec \"npm run build\""
+  },
+  "packageManager": "yarn@3.5.0",
   "devDependencies": {
-    "@types/module-alias": "^2.0.1",
-    "@types/node": "^18.0.1",
-    "@typescript-eslint/eslint-plugin": "^5.30.5",
-    "@typescript-eslint/parser": "^5.30.5",
-    "eslint": "^8.19.0",
-    "eslint-config-marine": "^9.4.1",
-    "eslint-import-resolver-typescript": "^2.7.0",
-    "eslint-plugin-import": "^2.25.4",
-    "nodemon": "^2.0.19",
-    "ts-node": "^10.8.2",
-    "typescript": "^4.7.4"
+    "@types/node": "^18.15.11",
+    "eslint": "^8.37.0",
+    "eslint-config-neon": "^0.1.41",
+    "eslint-formatter-pretty": "^5.0.0",
+    "nodemon": "^2.0.22",
+    "prettier": "^2.8.7",
+    "tsup": "^6.7.0",
+    "typescript": "^5.0.2"
   },
   "dependencies": {
-    "dotenv": "^16.0.1",
-    "module-alias": "^2.2.2"
+    "commander": "^10.0.0"
   }
 }

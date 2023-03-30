@@ -1,8 +1,20 @@
 {
-  // Eslint Project Config
-  "extends": "./tsconfig.json",
-  "compilerOptions": {
-    "allowJs": true
-  },
-  "include": ["**/*.ts", "**/*.js", ".eslintrc.js"]
+	"extends": "./tsconfig.json",
+	"compilerOptions": {
+		"allowJs": true
+	},
+	"include": [
+		"**/*.ts",
+		"**/*.tsx",
+		"**/*.js",
+		"**/*.mjs",
+		"**/*.jsx",
+		"**/*.test.ts",
+		"**/*.test.js",
+		"**/*.test.mjs",
+		"**/*.spec.ts",
+		"**/*.spec.js",
+		"**/*.spec.mjs"
+	],
+	"exclude": []
 }
