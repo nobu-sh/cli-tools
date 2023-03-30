@@ -1,0 +1,13 @@
+{
+  "editor.tabSize": 2,
+  "files.eol": "\n",
+  "files.associations": {
+    "*.json": "jsonc"
+  },
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
+  "explorer.fileNesting.patterns": {
+    "tsconfig.json": "tsconfig.*.json",
+    "package.json": "package-lock.json, yarn.lock"
+  }
+}
