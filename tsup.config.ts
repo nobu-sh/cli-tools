@@ -5,6 +5,7 @@ export const tsup: Options = {
 	clean: true,
 	minify: true,
 	dts: false,
+	splitting: true,
 
 	// Module
 	target: 'es2022',
@@ -15,7 +16,10 @@ export const tsup: Options = {
 	sourcemap: false,
 
 	// Entry
-	entryPoints: ['src/index.ts'],
+	// These are the files we want to preserve
+	// to allow invoking of specfic CLI functions
+	// rather then enfocing the use of the CLI root
+	entry: ['src/entrypoint/*.ts', 'src/commands/*.ts'],
 
 	// Exit
 	outDir: 'lib',

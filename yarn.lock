@@ -538,7 +538,9 @@ __metadata:
     tsup: ^6.7.0
     typescript: ^5.0.2
   bin:
+    ncli: lib/index.js
     nobu: lib/index.js
+    ntools: lib/index.js
   languageName: unknown
   linkType: soft
 

@@ -13,9 +13,9 @@
 		"README.md"
 	],
 	"bin": {
-		"nobu": "lib/index.js",
-		"ntools": "lib/index.js",
-		"ncli": "lib/index.js"
+		"ncli": "lib/entrypoint/ncli.js",
+		"nobu": "lib/entrypoint/nobu.js",
+		"ntools": "lib/entrypoint/ntools.js"
 	},
 	"homepage": "https://github.com/nobu-sh/cli-tools#readme",
 	"repository": {
@@ -26,11 +26,11 @@
 		"url": "https://github.com/nobu-sh/cli-tools/issues"
 	},
 	"scripts": {
-		"build": "tsup",
+		"build": "tsc --noEmit && tsup",
 		"prepack": "yarn build",
 		"lint": "prettier --check . && cross-env TIMING=1 eslint . --ext .mjs,.js,.ts --format=pretty",
 		"format": "prettier --write . && cross-env TIMING=1 eslint . --ext .mjs,.js,.ts --fix --format=pretty",
-		"watch": "nodemon --watch . --exec \"yarn build\""
+		"watch": "nodemon --watch src --exec \"yarn build\""
 	},
 	"packageManager": "yarn@3.5.0",
 	"devDependencies": {
