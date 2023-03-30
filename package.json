@@ -1,45 +1,50 @@
 {
-  "name": "@nobush/cli-tools",
-  "version": "0.0.1",
-  "description": "A package for playing music with Discord.js",
-  "author": {
-    "name": "Nobush",
-    "email": "chat@nobu.sh",
-    "url": "https://nobu.sh/"
-  },
-  "main": "lib/index.js",
-  "files": [
-    "lib",
-    "README.md"
-  ],
-  "bin": {
-    "nobu": "lib/index.js"
-  },
-  "homepage": "https://github.com/nobu-sh/cli-tools#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nobu-sh/cli-tools"
-  },
-  "bugs": {
-    "url": "https://github.com/nobu-sh/cli-tools/issues"
-  },
-  "scripts": {
-    "build": "tsup",
-    "prepack": "npm run build",
-    "watch": "nodemon --watch src --exec \"npm run build\""
-  },
-  "packageManager": "yarn@3.5.0",
-  "devDependencies": {
-    "@types/node": "^18.15.11",
-    "eslint": "^8.37.0",
-    "eslint-config-neon": "^0.1.41",
-    "eslint-formatter-pretty": "^5.0.0",
-    "nodemon": "^2.0.22",
-    "prettier": "^2.8.7",
-    "tsup": "^6.7.0",
-    "typescript": "^5.0.2"
-  },
-  "dependencies": {
-    "commander": "^10.0.0"
-  }
+	"name": "@nobush/cli-tools",
+	"version": "0.0.1",
+	"description": "A package for playing music with Discord.js",
+	"author": {
+		"name": "Nobush",
+		"email": "chat@nobu.sh",
+		"url": "https://nobu.sh/"
+	},
+	"main": "lib/index.js",
+	"files": [
+		"lib",
+		"README.md"
+	],
+	"bin": {
+		"nobu": "lib/index.js",
+		"ntools": "lib/index.js",
+		"ncli": "lib/index.js"
+	},
+	"homepage": "https://github.com/nobu-sh/cli-tools#readme",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/nobu-sh/cli-tools"
+	},
+	"bugs": {
+		"url": "https://github.com/nobu-sh/cli-tools/issues"
+	},
+	"scripts": {
+		"build": "tsup",
+		"prepack": "yarn build",
+		"lint": "prettier --check . && cross-env TIMING=1 eslint src --ext .mjs,.js,.ts --format=pretty",
+		"format": "prettier --write . && cross-env TIMING=1 eslint src --ext .mjs,.js,.ts --fix --format=pretty",
+		"watch": "nodemon --watch src --exec \"yarn build\""
+	},
+	"packageManager": "yarn@3.5.0",
+	"devDependencies": {
+		"@types/node": "^18.15.11",
+		"cross-env": "^7.0.3",
+		"eslint": "^8.37.0",
+		"eslint-config-neon": "^0.1.41",
+		"eslint-formatter-pretty": "^5.0.0",
+		"nodemon": "^2.0.22",
+		"prettier": "^2.8.7",
+		"tsup": "^6.7.0",
+		"typescript": "^5.0.2"
+	},
+	"dependencies": {
+		"commander": "^10.0.0"
+	}
 }
