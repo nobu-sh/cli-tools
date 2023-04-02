@@ -1,7 +1,7 @@
 {
 	"name": "@nobush/cli-tools",
-	"version": "0.0.1",
-	"description": "A package for playing music with Discord.js",
+	"version": "0.0.2",
+	"description": "A collection of CLI tools for web development",
 	"author": {
 		"name": "Nobush",
 		"email": "chat@nobu.sh",
