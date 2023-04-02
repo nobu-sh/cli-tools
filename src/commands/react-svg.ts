@@ -46,7 +46,6 @@ const makeConversion = async (path: string, options: Options): Promise<string> =
 	try {
 		const rawText = await readFileAsync(path);
 
-		// TODO: Find a less hacky way to do this.
 		// Optimizes the SVG by removing everything uneeded with the default preset.
 		const optimizedSvg = optimize(rawText, {
 			multipass: false,
@@ -71,6 +70,7 @@ const makeConversion = async (path: string, options: Options): Promise<string> =
 			],
 		});
 
+		// TODO: Just parse the text manually instead of using svgo for this part.
 		// Converts all attributes and elements incompatible with react to compatible with react.
 		// Uses hacky token placeholders that are later replaced with the correct values otherwise svgo
 		// will attempt to automatically escape the values to be HTML compatible.
