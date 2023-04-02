@@ -9,6 +9,8 @@
 		"eol-last": "error",
 		"semi": "off",
 		"n/shebang": "off",
+		"promise/prefer-await-to-then": "off",
+		"promise/prefer-await-to-callbacks": "off",
 		"@typescript-eslint/semi": "error",
 		"@typescript-eslint/member-delimiter-style": "error",
 		"@typescript-eslint/consistent-type-definitions": ["error", "interface"]

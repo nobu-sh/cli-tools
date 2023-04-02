@@ -1,9 +1,11 @@
 import { Command } from 'commander';
-import img from './img';
+import reactSvg from './react-svg';
+import tinify from './tinify';
 
 const root = new Command().description('A collection of CLI tools').version('0.0.1');
 
-root.addCommand(img);
+root.addCommand(tinify);
+root.addCommand(reactSvg);
 
 export function init(scriptName = 'ncli') {
 	root.name(scriptName);

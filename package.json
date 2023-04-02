@@ -30,10 +30,12 @@
 		"prepack": "yarn build",
 		"lint": "prettier --check . && cross-env TIMING=1 eslint . --ext .mjs,.js,.ts --format=pretty",
 		"format": "prettier --write . && cross-env TIMING=1 eslint . --ext .mjs,.js,.ts --fix --format=pretty",
-		"watch": "nodemon --watch src --exec \"yarn build\""
+		"watch": "nodemon --watch src --exec \"yarn build && yarn local:prod\"",
+		"local:prod": "npm i -g ."
 	},
 	"packageManager": "yarn@3.5.0",
 	"devDependencies": {
+		"@types/ini": "^1.3.31",
 		"@types/node": "^18.15.11",
 		"cross-env": "^7.0.3",
 		"eslint": "^8.37.0",
@@ -45,6 +47,10 @@
 		"typescript": "^5.0.2"
 	},
 	"dependencies": {
-		"commander": "^10.0.0"
+		"commander": "^10.0.0",
+		"glob": "^9.3.2",
+		"ini": "^4.0.0",
+		"svgo": "^3.0.2",
+		"tinify": "^1.7.1"
 	}
 }
