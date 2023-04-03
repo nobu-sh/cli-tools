@@ -153,7 +153,7 @@ const tinify = new Command()
 		// Resolve the globs to absolute paths.
 		let resolvedGlobs = globSync(globs, { absolute: true });
 
-		const fileTypes = ['png', 'webp', 'jpeg'];
+		const fileTypes = ['png', 'webp', 'jpeg', 'jpg'];
 
 		// Find all non SVG files and exit if there are any. If the ignore flag is set, remove them from the list.
 		const offendingFiles = resolvedGlobs.filter((glob) => !fileTypes.includes(glob.split('.').pop() ?? ''));
