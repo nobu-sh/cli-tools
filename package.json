@@ -1,6 +1,6 @@
 {
 	"name": "@nobush/cli-tools",
-	"version": "0.0.3",
+	"version": "0.1.0",
 	"description": "A collection of CLI tools for web development",
 	"author": {
 		"name": "Nobush",
